@@ -5,7 +5,6 @@ use_directory_urls: true
 
 theme:
   name: material
-  custom_dir: overrides
   icon:
     logo: simple/materialformkdocs
   favicon: images/material4mkdocs.svg

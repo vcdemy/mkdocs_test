@@ -1,0 +1,91 @@
+site_name: MkDocs樣板
+site_url: https://allergicalligator.github.io/mkdocs_template
+
+use_directory_urls: true
+
+theme:
+  name: material
+  custom_dir: overrides
+  icon:
+    logo: fontawesome/solid/landmark
+  favicon: images/landmark-solid.svg
+  features:
+    - navigation.expanded
+    - navigation.instant
+    # - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - navigation.indexes
+
+# 需要加入mkdocs裡面的.md檔要列在這裡
+nav:
+  - index.md
+  - about.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: abc
+          class: language-abc
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.mark
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - attr_list
+  - md_in_html
+  - toc:
+      title: 目錄
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - social:
+      cards_layout_options:
+        font_family: Noto Sans TC
+  - search:
+      separator: '[\s\u200b\-]'
+  - mkdocs-jupyter   # 如果要直接使用 .ipynb，則需要安裝並打開 mkdocs-jupyter
+  - markmap
+  - plotly
+
+extra:
+  generator: false  # 這一行是要去除 mkdocs-material 在 footer 的 credit
+  homepage: https://www.vcdemy.com
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/vcdemy
+    - icon: fontawesome/brands/facebook
+      link: https://facebook.com/vcdemy
+
+extra_css:
+  - css/extra.css
+
+# 底下是 Math 跟 ABC Notes 的設定的部分
+extra_javascript:
+  - js/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/abcjs@6.0.0/dist/abcjs-basic-min.js
+  - js/extra.js
+
+copyright: |
+  &copy; 2024~ <a href="https://allergicalligator.github.io/allergicalligator"  target="_blank" rel="noopener">Allergic Alligator</a>

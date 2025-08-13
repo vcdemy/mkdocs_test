@@ -7,8 +7,8 @@ theme:
   name: material
   custom_dir: overrides
   icon:
-    logo: fontawesome/solid/landmark
-  favicon: images/landmark-solid.svg
+    logo: simple/materialformkdocs
+  favicon: images/material4mkdocs.svg
   features:
     - navigation.expanded
     - navigation.instant
@@ -77,15 +77,15 @@ extra:
     - icon: fontawesome/brands/facebook
       link: https://facebook.com/vcdemy
 
-extra_css:
-  - css/extra.css
+# extra_css:
+#   - css/extra.css
 
 # 底下是 Math 跟 ABC Notes 的設定的部分
 extra_javascript:
   - js/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
   - https://cdn.jsdelivr.net/npm/abcjs@6.0.0/dist/abcjs-basic-min.js
-  - js/extra.js
+  # - js/extra.js
 
 copyright: |
   &copy; 2024~ <a href="https://allergicalligator.github.io/allergicalligator"  target="_blank" rel="noopener">Allergic Alligator</a>
